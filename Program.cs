@@ -29,7 +29,8 @@ AIAgent agent = new AzureOpenAIClient(
 
 ChatMessage message = new(ChatRole.User, [
     new TextContent("Extract the vehicle's license plate from the image."),
-    new UriContent("https://media.9news.com/assets/KUSA/images/b235013f-df6b-4ef3-993c-322644e73435/20240617T233423/b235013f-df6b-4ef3-993c-322644e73435_1920x1080.jpg", "image/jpeg")
+    new UriContent("https://vehiplates.com/wp-content/uploads/2024/02/what-are-blackout-license-plates.webp", "image/webp")
 ]);
+
 
 Console.WriteLine(await agent.RunAsync(message));
